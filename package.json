@@ -1,0 +1,21 @@
+{
+  "name": "hiko",
+  "version": "0.1.0",
+  "description": "The core services of Hiko.app",
+  "main": "server.js",
+  "author": "Kavin Varnan",
+  "license": "GPL-3.0",
+  "private": false,
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
