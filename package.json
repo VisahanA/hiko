@@ -2,14 +2,15 @@
   "name": "hiko",
   "version": "0.1.0",
   "description": "The core services of Hiko.app",
-  "main": "server.js",
+  "main": "src/server.js",
   "author": "Kavin Varnan",
   "license": "GPL-3.0",
   "private": false,
   "scripts": {
-    "dev": "node server.js"
+    "dev": "nodemon src/server.js"
   },
   "devDependencies": {
+    "nodemon": "^2.0.4",
     "prettier": "2.0.5"
   },
   "dependencies": {
