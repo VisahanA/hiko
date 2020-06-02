@@ -1,3 +1,7 @@
+import { Button } from '../next/components/Button';
+
 export default function () {
-  return <div>Hello</div>
+  return <div>
+    <Button>Testing Button</Button>
+  </div>
 }

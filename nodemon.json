@@ -1,4 +1,4 @@
 {
   "verbose": true,
-  "ignore": ["./src/pages"]
+  "ignore": ["./src/pages", "./src/next"]
 }
