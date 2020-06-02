@@ -1,20 +1,25 @@
 const express = require('express')
 const next = require('next')
+const cors = require('cors')
+const helmet = require('helmet')
 
 const port = process.env.SERVER_PORT || 3000
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev, dir: './src' })
-const handle = app.getRequestHandler()
+const nextApp = next({ dev, dir: './src' })
+const handle = nextApp.getRequestHandler()
 
 const start = async () => {
-  await app.prepare();
-  const server = express()
+  await nextApp.prepare();
+  const expressApp = express()
+  expressApp.use(cors());
+  expressApp.use(express.json());
+  expressApp.use(helmet());
 
-  server.all('*', (req, res) => {
+  expressApp.all('*', (req, res) => {
     return handle(req, res)
   })
 
-  server.listen(port, (err) => {
+  expressApp.listen(port, (err) => {
     if (err) throw err
     console.log(` Ready on http://localhost:${port}`)
   })
