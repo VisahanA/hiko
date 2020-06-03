@@ -1,14 +1,15 @@
-import styles from './Button.module.scss'
+// import styles from './Button.module.scss'
+// import styles from "../sass/pages/login/login-3.scss";
 
 export function Button() {
   return (
-    <button
-      type="button"
-      // Note how the "error" class is accessed as a property on the imported
-      // `styles` object.
-      className={styles.error}
-    >
-      Destroy
-    </button>
+    <>
+      <input type="checkbox" style={{display: "none"}} />
+      <label className="checkbox checkbox-lg checkbox-single">
+        <input type="checkbox"/>
+        testing
+        <span />
+      </label>
+    </>
   )
 }
