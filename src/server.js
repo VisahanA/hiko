@@ -2,6 +2,7 @@ const express = require('express')
 const next = require('next')
 const cors = require('cors')
 const helmet = require('helmet')
+const logger = require('./utils/logger')
 
 const port = process.env.SERVER_PORT || 3000
 const dev = process.env.NODE_ENV !== 'production'
@@ -21,7 +22,7 @@ const start = async () => {
 
   expressApp.listen(port, (err) => {
     if (err) throw err
-    console.log(` Ready on http://localhost:${port}`)
+    logger.info(` Ready on http://localhost:${port}`)
   })
 }
 

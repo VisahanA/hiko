@@ -1,12 +1,11 @@
 import SignUpPage from '../next/pages/SignUpPage'
-import FullHeightPage from "../next/components/FullHeightPage";
 
 export default function () {
-  return <div>
-    <FullHeightPage>
+  return(
+    <div>
       <SignUpPage/>
-    </FullHeightPage>
-  </div>
+    </div>
+  )
 }
 
 export async function getServerSideProps(context) {
