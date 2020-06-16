@@ -9,27 +9,16 @@ class MyDocument extends Document {
   render() {
     return (
       <Html  lang="en">
-        <Head >
-          <link
-            href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto:300,400,500,600,700"
-            rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet"
-          />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
-          />
+        <Head>
+
         </Head>
         <body>
-        <Main />
-        <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     )
   }
 }
 
-export default MyDocument
+export default MyDocument;

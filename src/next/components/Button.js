@@ -1,15 +1,9 @@
-// import styles from './Button.module.scss'
-// import styles from "../sass/pages/login/login-3.scss";
+import styles from './Button.module.scss'
 
 export function Button() {
   return (
     <>
-      <input type="checkbox" style={{display: "none"}} />
-      <label className="checkbox checkbox-lg checkbox-single">
-        <input type="checkbox"/>
-        testing
-        <span />
-      </label>
+      <div className={`${styles.something} testing`}>This is a span. This is from the button component</div>
     </>
   )
 }
