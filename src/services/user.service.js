@@ -39,6 +39,10 @@ module.exports = {
       error.code = 101
       throw error;
     }
+  },
+
+  getUserCount: async () => {
+    return await userModel.usersCount();
   }
 };
 

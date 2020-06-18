@@ -5,7 +5,7 @@ const schema = new mongoose.Schema({
   password: { type: String, required: true },
 }, { timestamps: true, useNestedStrict: true, versionKey: false });
 
-const model = mongoose.model("User", schema, "user");
+const model = mongoose.models.User || mongoose.model("User", schema, "user");
 
 module.exports = {
   signUp: async (username, password) => {
@@ -15,5 +15,9 @@ module.exports = {
   get: async (username) => {
     const data = await model.findOne({ username });
     return JSON.parse(JSON.stringify(data));
+  },
+  usersCount: async () => {
+    const data = await model.find();
+    return data.length;
   }
 };

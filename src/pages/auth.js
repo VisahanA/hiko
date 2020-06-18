@@ -1,17 +1,21 @@
 import SignUpPage from '../next/pages/SignUpPage'
+import userServices from '../services/user.service';
 
-export default function () {
+export default function ({ userCount }) {
   return(
     <div>
+      {userCount}
       <SignUpPage/>
     </div>
   )
 }
 
 export async function getServerSideProps(context) {
-  // context.res.statusCode = 302
-  // context.res.setHeader('Location', `/`)
+  const userCount = await userServices.getUserCount();
+  console.log(userCount);
   return {
-    props: {} // will be passed to the page component as props
+    props: {
+      userCount
+    }
   }
 }
