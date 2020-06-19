@@ -1,21 +1,21 @@
 import SignUpPage from '../next/pages/SignUpPage'
-import userServices from '../services/user.service';
+import authService from '../services/auth.service';
+import LoginPage from "../next/pages/LoginPage";
 
-export default function ({ userCount }) {
+export default function ({ forceSignUp }) {
+
   return(
     <div>
-      {userCount}
-      <SignUpPage/>
+      {forceSignUp ? <SignUpPage/> : <LoginPage/>}
     </div>
   )
 }
 
 export async function getServerSideProps(context) {
-  const userCount = await userServices.getUserCount();
-  console.log(userCount);
+  const userCount = await authService.getUserCount();
   return {
     props: {
-      userCount
+      forceSignUp: userCount === 0
     }
   }
 }

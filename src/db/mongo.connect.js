@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const constants = require('../utils/constants');
+const config = require('../config/config');
 const logger = require('../utils/logger');
 
 const connectToDb = async () => {
   try {
-    await mongoose.connect(constants.DATABASE.MONGO_URI, {
+    await mongoose.connect(config.DATABASE.MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true
