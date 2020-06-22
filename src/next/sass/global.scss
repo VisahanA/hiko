@@ -1,4 +1,7 @@
-.testing {
-  color: red;
-  background-color: orange;
+@import "./init";
+
+body {
+  height: 100%;
+  cursor: default;
+  margin: 0;
 }

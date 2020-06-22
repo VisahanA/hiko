@@ -2,6 +2,7 @@ import axios from 'axios';
 import Router from "next/router";
 import { useForm } from 'react-hook-form';
 import { useCookies } from 'react-cookie';
+import { AuthHeader } from "../components/auth/AuthHeader";
 
 export default function () {
 
@@ -27,7 +28,7 @@ export default function () {
 
   return(
     <div>
-      Sign up page
+      <AuthHeader/>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input name="name" ref={register} />
         <input name="email" ref={register({ required: true })} />

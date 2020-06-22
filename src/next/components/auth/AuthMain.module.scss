@@ -1,0 +1,27 @@
+@import "../../sass/init";
+
+.auth-main {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  overflow: visible;
+  position: relative;
+}
+
+.main-form {
+  width: 480px;
+  max-height: 75vh;
+  background: #fff;
+  box-shadow: 0 25px 75px rgba(16,30,54,.25);
+  border-radius: 6px;
+  padding: 30px 60px 26px;
+  margin-top: -75px;
+  position: relative;
+  overflow-y: auto;
+}
