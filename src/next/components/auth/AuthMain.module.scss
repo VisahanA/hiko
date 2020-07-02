@@ -4,24 +4,83 @@
   flex-grow: 1;
   width: 100%;
   display: flex;
-  background-color: red;
   justify-content: center;
   align-items: center;
+  //background-image: url("/bg-4.jpg");
 }
-
 .main-container {
   overflow: visible;
   position: relative;
 }
-
-.main-form {
-  width: 480px;
+.main-form{
+  width: 370px;
   max-height: 75vh;
   background: #fff;
   box-shadow: 0 25px 75px rgba(16,30,54,.25);
   border-radius: 6px;
   padding: 30px 60px 26px;
-  margin-top: -75px;
+  margin-top: 7em;
   position: relative;
   overflow-y: auto;
 }
+.main-form-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 46px;
+  font-family: "Gotham Pro","Proxima Nova",arial,serif;
+  color: #292d34;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main-form-row {
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+}
+.main-form-row-label {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 11px;
+  font-family: "Gotham Pro","Proxima Nova",arial,serif;
+  color: #292d34;
+  text-align:left;
+  padding: 0 0 8px 2px;
+}
+.main-form-icon {
+  position: absolute;
+  left: 12px;
+  top: 29px;
+  width: 18px;
+  height: 18px;
+}
+.main-form h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500
+}
+.main-form input[type="text"],
+.main-form input[type="password"]  {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: "Gotham Pro","Proxima Nova",arial,serif;
+  width: 100%;
+  border: 1px solid #e9ebf0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 20px 8px 40px;
+  color: #292d34;
+}
+.main-form input[type="submit"] {
+  transition: background-color .2s cubic-bezier(.785,.135,.15,.86) 0s;
+  height: 50px;
+  background-color:mediumpurple ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
