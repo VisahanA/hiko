@@ -19,7 +19,7 @@
   box-shadow: 0 25px 75px rgba(16,30,54,.25);
   border-radius: 6px;
   padding: 30px 60px 26px;
-  margin-top: 7em;
+  margin-top: 10em;
   position: relative;
   overflow-y: auto;
 }
@@ -74,7 +74,8 @@
 .main-form input[type="submit"] {
   transition: background-color .2s cubic-bezier(.785,.135,.15,.86) 0s;
   height: 50px;
-  background-color:mediumpurple ;
+  color: white;
+  background-color:#7b68ee ;
   display: flex;
   align-items: center;
   justify-content: center;

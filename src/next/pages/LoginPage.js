@@ -3,9 +3,7 @@ import Router from 'next/router'
 import { useForm } from 'react-hook-form';
 import { useCookies } from 'react-cookie';
 import { AuthHeader } from "../components/auth/AuthHeader";
-import { AuthMain } from "../components/auth/AuthMain";
 import styles from "../components/auth/AuthMain.module.scss";
-import Grid from "@material-ui/core/Grid";
 import React from "react";
 import {AuthRoot} from "../components/auth/Authroot";
 
@@ -62,7 +60,7 @@ export default function () {
                   {errors.password && 'Password is required'}
                   <br/>
                 </div>
-                <input type="submit" />
+                <input type="submit" name="Login" />
               </form>
             </div>
           </div>
